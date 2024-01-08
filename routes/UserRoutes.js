@@ -6,7 +6,7 @@ import singleUpload from "../middlewares/multer.js"
 const UserRouter=express.Router()
 
 
-UserRouter.route("/ragister").post( singleUpload,ragisterUser)
+UserRouter.route("/ragister").post(singleUpload,ragisterUser)
 UserRouter.route("/login").post(login)
 UserRouter.route("/logout").get(logout)
 UserRouter.route("/me").get(isAuth, profile).delete(isAuth,deleteMyProfile)
